@@ -56,6 +56,7 @@ export default class ProjectEntry extends Vue {
         display: flex
 
         &__element
+            margin-right: .5em
             display: block
             max-width: 1.5em
             max-height: 1.5em

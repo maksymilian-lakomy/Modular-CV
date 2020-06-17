@@ -1,8 +1,10 @@
 import { Component } from 'vue';
 import GitHubIcon from '@/components/Icons/GitHubIcon.vue';
+import MediumIcon from '@/components/Icons/MediumIcon.vue';
 
 enum Sources {
-    GitHub
+    GitHub,
+    Medium
 }
 
 class Source {
@@ -16,7 +18,8 @@ class Source {
 }
 
 const sources: Record<Sources, Source> = {
-    [Sources.GitHub]: new Source('GitHub', GitHubIcon)
+    [Sources.GitHub]: new Source('GitHub', GitHubIcon),
+    [Sources.Medium]: new Source('Medium', MediumIcon)
 }
 
 export default Sources;

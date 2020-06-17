@@ -10,6 +10,10 @@ export class Link {
         this.icon = icon;
     }
 
+    public get name(): string {
+        return sources[this.icon].name;
+    }
+
     public get component(): Component {
         return sources[this.icon].icon;
     }

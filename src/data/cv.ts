@@ -4,6 +4,9 @@ import { ProjectEntry } from '@/classes/ProjectEntry';
 import { SkillEntry } from '@/classes/SkillEntry';
 import { DefaultEntry } from '@/classes/DefaultEntry';
 import { EducationEntry } from '@/classes/EducationEntry';
+import { PhotoEntry } from '@/classes/PhotoEntry';
+
+import { SocialEntry } from '@/classes/SocialEntry';
 
 import InlineSection from '@/components/InlineSection.vue';
 
@@ -13,24 +16,27 @@ import Sources from '@/classes/Sources';
 
 const cv = new CV();
 
-const projectsSection = new Section('Projekty Webowe');
+const projectsSection = new Section('Najciekawsze Projekty');
 
 projectsSection.entries.push(new ProjectEntry('Dungeons Inside', [Technologies.ThreeJs, Technologies.VueJs, Technologies.VueJsRouter, Technologies.Vuex, Technologies.TypeScript],
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`));
 
 projectsSection.entries.push(new ProjectEntry('Pokédex', [Technologies.VueJs, Technologies.VueJsRouter, Technologies.TypeScript],
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`, 
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`,
     [new Link('https://github.com/maksymilian-lakomy/allegro-pokedex', Sources.GitHub)]),
 );
 
 projectsSection.entries.push(new ProjectEntry('Modularne CV', [Technologies.VueJs, Technologies.TypeScript],
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`));
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`,
+    [new Link('https://github.com/maksymilian-lakomy/Modular-CV', Sources.GitHub)]));
 
 projectsSection.entries.push(new ProjectEntry('Biedaflix', [Technologies.VueJs, Technologies.VueJsRouter, Technologies.Vuex, Technologies.JavaScript],
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`));
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`,
+    [new Link('https://github.com/grottgera15/biedaflix-client', Sources.GitHub), new Link('https://github.com/grottgera15/biedaflix-cms', Sources.GitHub)]));
 
 projectsSection.entries.push(new ProjectEntry(`Don't Starve Bootleg`, [Technologies.csharp, Technologies.unity],
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`));
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`,
+    [new Link('https://github.com/maksymilian-lakomy/allegro-pokedex', Sources.GitHub)]));
 
 const skillsSection = new Section('Tech stack', InlineSection);
 
@@ -54,12 +60,16 @@ cv.sections.push(projectsSection, skillsSection, educationSection);
 
 const aboutMePersonalSection = new Section('O mnie');
 
-aboutMePersonalSection.entries.push(new DefaultEntry('Tudu?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>'));
+aboutMePersonalSection.entries.push(new PhotoEntry('Photo', require('@/assets/photo.jpg')));
+
+aboutMePersonalSection.entries.push(new DefaultEntry('About', `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur ac dolor et mattis. Nam laoreet nec velit at luctus. Donec ac nisi turpis. <p>Morbi massa risus, consequat vitae odio a, vulputate convallis augue. Duis eget lacus blandit velit lacinia fringilla eget sed urna. Duis bibendum a tellus et pharetra.</p>`));
 
 const contantPersonalSection = new Section('Kontakt');
 
 const socialMediaPersonalSection = new Section('Tu jestem');
 
+socialMediaPersonalSection.entries.push(new SocialEntry('maksymilian-lakomy', new Link('https://github.com/maksymilian-lakomy', Sources.GitHub)));
+socialMediaPersonalSection.entries.push(new SocialEntry('@maxlakomy', new Link('https://medium.com/@maxlakomy', Sources.Medium)));
 
 cv.personal.push(aboutMePersonalSection, socialMediaPersonalSection, contantPersonalSection);
 
