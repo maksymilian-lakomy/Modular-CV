@@ -1,32 +1,76 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-#nav {
-  padding: 30px;
-}
+@Component
+export default class App extends Vue {
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
 }
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="sass">
+@import '@/styles/styles.sass'
+
+@font-face
+    font-family: 'Source Sans Pro'
+    src: url('./assets/fonts/SourceSansPro-Regular.ttf') format('truetype')
+    font-weight: 400
+
+@font-face
+    font-family: 'Source Sans Pro'
+    src: url('./assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype')
+    font-weight: 500
+
+@font-face
+    font-family: 'Source Sans Pro'
+    src: url('./assets/fonts/SourceSansPro-Bold.ttf') format('truetype')
+    font-weight: 700
+
+@font-face
+    font-family: 'Source Sans Pro'
+    src: url('./assets/fonts/SourceSansPro-Black.ttf') format('truetype')
+    font-weight: 900
+
+@font-face
+    font-family: 'Ubuntu'
+    src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype')
+    font-weight: 400
+
+@font-face
+    font-family: 'Ubuntu'
+    src: url('./assets/fonts/Ubuntu-Medium.ttf') format('truetype')
+    font-weight: 500
+
+@font-face
+    font-family: 'Ubuntu'
+    src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype')
+    font-weight: 700
+    
+svg
+    display: block
+    width: 100%
+    height: 100%
+
+body
+    font-family: Ubuntu, Arial, Helvetica, sans-serif
+    font-size: 11pt
+    max-width: 29cm
+    margin: 0 auto
+    background-color: white
+    color: $main-color
+
+ol, ul
+    margin: 0
+    padding: 0
+
+li
+    list-style: none
+
+p
+    letter-spacing: .03em
+    line-height: 2em
 </style>
