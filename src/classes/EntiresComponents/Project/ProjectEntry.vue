@@ -15,7 +15,7 @@
                 :style="hoverStyle(i)"
             >{{tech.name}}</li>
         </ul>
-        <p v-html="description" />
+        <span v-html="description" />
     </v-entry-template>
 </template>
 

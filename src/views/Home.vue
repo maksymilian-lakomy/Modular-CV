@@ -1,7 +1,7 @@
 <template>
     <div class="cv">
         <v-header>
-            <h1>Maksymilian Łakomy</h1>
+            <h1>{{cv.person}}</h1>
         </v-header>
         <main class="home">
             <article class="contact">
@@ -16,7 +16,7 @@
             </article>
         </main>
         <v-footer>
-            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez <b>{{$route.params.company}}</b> w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez <b>{{cv.company}}</b> w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
         </v-footer>
     </div>
 </template>
@@ -35,6 +35,9 @@ import { Section } from '@/classes/Section';
     components: {
         'v-header': Header,
         'v-footer': Footer
+    },
+    metaInfo: {
+        title: `${cv.person} CV | ${cv.company}`
     }
 })
 export default class Home extends Vue {

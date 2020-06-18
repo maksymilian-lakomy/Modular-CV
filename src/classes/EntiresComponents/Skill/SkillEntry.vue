@@ -1,6 +1,6 @@
 <template>
     <v-entry-template :name="name">
-        <p v-html="description"/>
+        <span v-html="description"/>
     </v-entry-template>
 </template>
 

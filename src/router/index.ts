@@ -6,14 +6,15 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
     {
-        path: '/:company',
+        path: '/',
         name: 'Home',
         component: Home
     }
 ]
 
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history'
 })
 
 export default router

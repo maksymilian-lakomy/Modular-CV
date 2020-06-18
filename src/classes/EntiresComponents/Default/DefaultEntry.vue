@@ -1,6 +1,6 @@
 <template>
     <v-untitled-entry-template>
-        <p v-html="description"/>
+        <span v-html="description"/>
     </v-untitled-entry-template>
 </template>
 

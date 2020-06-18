@@ -5,7 +5,7 @@ import OrderedSection from '@/components/Sections/OrderedSection.vue';
 
 export class Section {
     public readonly name: string;
-    private _sectionComponent = OrderedSection;
+    private _sectionComponent: VueConstructor = OrderedSection;
     
     public readonly entries: Array<Entry> = [];
 
