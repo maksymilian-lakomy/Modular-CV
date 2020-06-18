@@ -1,9 +1,8 @@
 <template>
     <div class="cv">
-        <header class="header">
+        <v-header>
             <h1>Maksymilian Łakomy</h1>
-            <h2>Front End Developer</h2>
-        </header>
+        </v-header>
         <main class="home">
             <article class="contact">
                 <component v-for="(section, i) in personal" :key="i" :is="section">
@@ -16,7 +15,9 @@
                 </component>
             </article>
         </main>
-        <footer></footer>
+        <v-footer>
+            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez <b>{{$route.params.company}}</b> w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+        </v-footer>
     </div>
 </template>
 
@@ -24,10 +25,18 @@
 import Vue, { Component } from 'vue';
 import ComponentDecorator from 'vue-class-component';
 
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
 import cv from '@/data/cv';
 import { Section } from '@/classes/Section';
 
-@ComponentDecorator
+@ComponentDecorator({
+    components: {
+        'v-header': Header,
+        'v-footer': Footer
+    }
+})
 export default class Home extends Vue {
     readonly cv = cv;
 
@@ -38,7 +47,6 @@ export default class Home extends Vue {
     public getPersonalEntries(i: number): Array<Component> {
         return this.cv.personal[i].entriesComponents;
     }
-
 
     public get sections(): Array<Component> {
         return this.cv.sections.map(section => section.component);

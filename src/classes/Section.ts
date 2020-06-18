@@ -1,7 +1,7 @@
 import { Entry } from './Entry';
 import { Component, VueConstructor } from 'vue';
 
-import OrderedSection from '@/components/OrderedSection.vue';
+import OrderedSection from '@/components/Sections/OrderedSection.vue';
 
 export class Section {
     public readonly name: string;

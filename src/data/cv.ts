@@ -9,7 +9,7 @@ import { ContactEntry } from '@/classes/ContantEntry';
 
 import { SocialEntry } from '@/classes/SocialEntry';
 
-import InlineSection from '@/components/InlineSection.vue';
+import InlineSection from '@/components/Sections/InlineSection.vue';
 
 import Technologies from './technologies';
 import { Link } from '@/classes/Link';
