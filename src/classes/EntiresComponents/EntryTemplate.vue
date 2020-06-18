@@ -39,5 +39,5 @@ export default class EntryTemplate extends Vue {
             width: 2px
             background-color: $main-color
         &__title
-            margin-right: .5em
+            margin-right: .75em
 </style>

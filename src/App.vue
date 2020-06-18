@@ -63,8 +63,8 @@ svg
 
 body
     font-family: Ubuntu, Arial, Helvetica, sans-serif
-    font-size: 10pt
-    max-width: 29cm
+    font-size: 9pt
+    max-width: 21cm
     margin: 0 auto
     background-color: white
     color: $main-color

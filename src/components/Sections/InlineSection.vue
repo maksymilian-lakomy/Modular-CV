@@ -27,7 +27,7 @@ export default class InlineSection extends Vue {
     display: grid
     grid-template-columns: repeat(3, 1fr)
     column-gap: 1em
-    @media (max-width: 640px)
+    @media (max-width: 148mm)
         grid-template-columns: 1fr
 
 </style>
