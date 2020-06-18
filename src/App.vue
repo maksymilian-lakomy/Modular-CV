@@ -50,6 +50,11 @@ export default class App extends Vue {
     src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype')
     font-weight: 700
     
+
+a
+    color: $link-color
+    font-weight: bolder
+    
 svg
     display: block
     width: 100%
@@ -57,7 +62,7 @@ svg
 
 body
     font-family: Ubuntu, Arial, Helvetica, sans-serif
-    font-size: 11pt
+    font-size: 10pt
     max-width: 29cm
     margin: 0 auto
     background-color: white

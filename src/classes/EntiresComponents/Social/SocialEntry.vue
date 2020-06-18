@@ -1,15 +1,18 @@
 <template>
     <v-untitled-entry-template>
         <a
-            :href="link.link"
             class="social-entry-link"
-            @mouseenter="over=true"
-            @mouseleave="over=false"
+            v-for="(link, i) in links"
+            :key="i"
+            :href="link.link"
+            @mouseenter="over=link.name"
+            @mouseleave="over=null"
         >
             <component :is="link.component" class="social-entry-link__icon" />
             <div class="social-entry-link__text">
                 <transition name="component-fade">
-                    <span :key="over">{{text}}</span>
+                    <span :key="over" v-if="over === link.name">{{link.name}}</span>
+                    <span v-else>{{link.text}}</span>
                 </transition>
             </div>
         </a>
@@ -30,13 +33,9 @@ import { Link } from '@/classes/Link';
 })
 export default class SocialEntry extends Vue {
     private name!: string;
-    private link!: Link;
+    private links!: Array<Link>;
 
-    private over = false;
-
-    private get text(): string {
-        return this.over ? this.link.name : this.name;
-    }
+    private over: string | null = null;
 }
 </script>
 
@@ -47,7 +46,6 @@ a
     
 .social-entry-link
     position: relative
-    opacity: .75
     display: flex
     align-items: center
     margin: 1em 0
@@ -70,8 +68,6 @@ a
             position: absolute
             left: 0
     
-    &:hover
-        opacity: 1
 
 .component-fade-enter-active,
 .component-fade-leave-active

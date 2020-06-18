@@ -60,14 +60,14 @@ export default class ProjectEntry extends Vue {
             display: block
             max-width: 1.5em
             max-height: 1.5em
-            opacity: .75
             transition-duration: .2s
-            &:hover
-                opacity: 1
 
     &__stack
         display: flex
         &__element
+            display: flex
+            text-align: center
+            align-items: center
             cursor: default
             font-size: .8em
             padding: .25em 1em

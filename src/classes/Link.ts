@@ -2,10 +2,12 @@ import Sources, { sources } from './Sources';
 import { Component } from 'vue';
 
 export class Link {
+    public readonly text: string;
     public readonly link: string;
     public readonly icon: Sources;
 
-    constructor(link: string, icon: Sources) {
+    constructor(text: string, link: string, icon: Sources) {
+        this.text = text;
         this.link = link;
         this.icon = icon;
     }

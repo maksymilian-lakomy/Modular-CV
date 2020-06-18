@@ -8,12 +8,11 @@ export class SocialEntry extends Entry {
 
     private _component = SocialEntryComponent;
 
-    private _link: Link;
-    
+    private _links: Array<Link>;
 
-    constructor(name: string, link: Link) {
+    constructor(name: string, links: Array<Link>) {
         super(name);
-        this._link = link;
+        this._links = links;
     }
 
     public get component(): Component {
@@ -21,7 +20,7 @@ export class SocialEntry extends Entry {
             data: () => {
                 return {
                     name: this.name,
-                    link: this._link
+                    links: this._links
                 }
             }
         })

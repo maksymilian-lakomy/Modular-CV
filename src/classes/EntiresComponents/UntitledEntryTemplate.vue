@@ -12,3 +12,8 @@ import Component from 'vue-class-component';
 export default class UntitledEntryTemplate extends Vue {
 }
 </script>
+
+<style lang="sass" scoped>
+.untitled-entry
+    margin-top: 2em
+</style>

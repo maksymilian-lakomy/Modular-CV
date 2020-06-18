@@ -22,7 +22,6 @@ export default class SectionTemplate extends Vue {
 
 <style lang="sass" scoped>
 @import '@/styles/styles.sass'
-
 .section
     &__header
         position: relative

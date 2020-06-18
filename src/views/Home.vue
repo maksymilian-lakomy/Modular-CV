@@ -55,6 +55,8 @@ export default class Home extends Vue {
 
 <style lang="sass" scoped>
 .cv
+    margin: 1cm
+    width: calc(100% - 2cm)
     display: block
 
 .header
