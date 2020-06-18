@@ -42,14 +42,14 @@ dt, dd
     margin: unset
 
 .contact-grid
-    display: grid
-    grid-template-columns: 1fr 3fr
-    align-items: center
+    display: flex
+    flex-direction: column
     column-gap: .5em
     row-gap: 1em
+    line-height: 1.5em
 
     dd
-        text-align: right
+        margin-bottom: .5em
     
     dt
         font-weight: bolder

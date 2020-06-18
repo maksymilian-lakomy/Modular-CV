@@ -25,10 +25,9 @@ export default class Photo extends Vue {
 
 <style lang="sass" scoped>
 .photo-entry
-    display: block
     padding: 0
     margin: 0
-
+    
     img
         width: 100%
         height: 100%

@@ -1,9 +1,6 @@
 <template>
     <div class="cv">
         <header class="header">
-            <figure>
-                <!-- <img src="@/assets/photo.gif" /> -->
-            </figure>
             <h1>Maksymilian Łakomy</h1>
             <h2>Front End Developer</h2>
         </header>
@@ -65,4 +62,9 @@ export default class Home extends Vue {
     display: grid
     grid-template-columns: 1fr 3fr
     column-gap: 2em
+    @media (max-width: 960px)
+        grid-template-columns: 2fr 3fr
+
+    @media (max-width: 640px)
+        grid-template-columns: 1fr
 </style>

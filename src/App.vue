@@ -54,7 +54,8 @@ export default class App extends Vue {
 a
     color: $link-color
     font-weight: bolder
-    
+    word-break: break-all
+
 svg
     display: block
     width: 100%

@@ -64,7 +64,9 @@ export default class ProjectEntry extends Vue {
 
     &__stack
         display: flex
+        flex-wrap: wrap
         &__element
+            margin: .25em 0
             display: flex
             text-align: center
             align-items: center
