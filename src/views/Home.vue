@@ -70,9 +70,7 @@ export default class Home extends Vue {
     display: grid
     grid-template-columns: 2fr 5fr
     column-gap: 2em
-    @media (max-width: 148mm)
-        grid-template-columns: 2fr 3fr
 
-    @media (max-width: 105mm)
+    @media (max-width: 148mm)
         grid-template-columns: 1fr
 </style>

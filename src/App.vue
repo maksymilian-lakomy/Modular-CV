@@ -1,5 +1,7 @@
 <template>
-    <router-view />
+    <div id="app" :class="{'app--print': print}">
+        <router-view />
+    </div>
 </template>
 
 <script lang="ts">
@@ -8,32 +10,16 @@ import Component from 'vue-class-component';
 
 @Component
 export default class App extends Vue {
-
+    private get print(): boolean {   
+        if (this.$route.query.print !== undefined)
+            return true;
+        return false;
+    }
 }
 </script>
 
 <style lang="sass">
 @import '@/styles/styles.sass'
-
-@font-face
-    font-family: 'Source Sans Pro'
-    src: url('./assets/fonts/SourceSansPro-Regular.ttf') format('truetype')
-    font-weight: 400
-
-@font-face
-    font-family: 'Source Sans Pro'
-    src: url('./assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype')
-    font-weight: 500
-
-@font-face
-    font-family: 'Source Sans Pro'
-    src: url('./assets/fonts/SourceSansPro-Bold.ttf') format('truetype')
-    font-weight: 700
-
-@font-face
-    font-family: 'Source Sans Pro'
-    src: url('./assets/fonts/SourceSansPro-Black.ttf') format('truetype')
-    font-weight: 900
 
 @font-face
     font-family: 'Ubuntu'
@@ -49,7 +35,15 @@ export default class App extends Vue {
     font-family: 'Ubuntu'
     src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype')
     font-weight: 700
-    
+
+#app
+    margin: auto
+    font-size: 11pt
+    max-width: 70%
+
+.app--print
+    max-width: 21cm !important
+    font-size: 9pt !important
 
 a
     color: $link-color
@@ -63,8 +57,6 @@ svg
 
 body
     font-family: Ubuntu, Arial, Helvetica, sans-serif
-    font-size: 9pt
-    max-width: 21cm
     margin: 0 auto
     background-color: white
     color: $main-color
