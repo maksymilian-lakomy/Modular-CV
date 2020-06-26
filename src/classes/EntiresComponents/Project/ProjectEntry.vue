@@ -58,8 +58,8 @@ export default class ProjectEntry extends Vue {
         &__element
             margin-right: .5em
             display: block
-            max-width: 1.5em
-            max-height: 1.5em
+            max-width: 24px
+            max-height: 24px
             transition-duration: .2s
 
     &__stack
