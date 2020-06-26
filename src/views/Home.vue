@@ -15,7 +15,7 @@
                 </component>
             </article>
         </main>
-        <v-footer>
+        <v-footer v-if="cv.showFooter">
             <p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez <b>{{cv.company}}</b> w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
         </v-footer>
     </div>

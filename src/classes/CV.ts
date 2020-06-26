@@ -6,4 +6,6 @@ export class CV {
 
     public company = "(Wstaw nazwę firmy)";
     public person = "(Imię Nazwisko)";
+
+    public showFooter = true;
 }

@@ -41,6 +41,9 @@ export default class App extends Vue {
     font-size: 11pt
     max-width: 70%
 
+    @media (max-width: 148mm)
+        max-width: 100%
+
 .app--print
     max-width: 21cm !important
     font-size: 9pt !important
